@@ -1,3 +1,5 @@
+package com.example.tkl.androlab;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,6 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class MySQLite extends SQLiteOpenHelper {
+
     private static final int
             DATABASE_VERSION = 1;
     public MySQLite(Context context) {
@@ -16,8 +19,7 @@ public class MySQLite extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase
-                                 database) {
+    public void onCreate(SQLiteDatabase database) {
         String DATABASE_CREATE =
                 "create table animals " +
                         "(_id integer primary key autoincrement," +

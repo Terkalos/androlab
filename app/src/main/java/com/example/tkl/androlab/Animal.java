@@ -1,3 +1,5 @@
+package com.example.tkl.androlab;
+
 import java.io.Serializable;
 
 /**
