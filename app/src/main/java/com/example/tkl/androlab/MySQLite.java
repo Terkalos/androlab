@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MySQLite extends SQLiteOpenHelper {
 
     private static final int
-            DATABASE_VERSION = 1;
+            DATABASE_VERSION = 2;
     public MySQLite(Context context) {
         super(context, "animalsDB",null, DATABASE_VERSION);
     }
@@ -36,8 +36,7 @@ public class MySQLite extends SQLiteOpenHelper {
                 onCreate(db);
     }
     public void dodaj(Animal zwierz){
-        SQLiteDatabase db =
-                this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("gatunek", zwierz.getGatunek());
         values.put("kolor", zwierz.getKolor());
